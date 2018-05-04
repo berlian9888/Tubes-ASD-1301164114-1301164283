@@ -12,7 +12,7 @@ addressMhs alokasiMhs(Mahasiswa mhs)
 }
 void insertFirstMhs(ListMhs &L, addressMhs mhs)
 {
-    //-----your code here----
+    //1301164283
     if (first(L)==NULL) {
         first(L)=mhs;
 
@@ -24,6 +24,7 @@ void insertFirstMhs(ListMhs &L, addressMhs mhs)
 }
 void insertAfterMhs(ListMhs &L,addressMhs prec, addressMhs mhs)
 {
+    //1301164283
     //-----your code here----
     next(mhs)=next(prec);
     next(prec)=mhs;
@@ -31,6 +32,7 @@ void insertAfterMhs(ListMhs &L,addressMhs prec, addressMhs mhs)
 }
 void insertLastMhs(ListMhs &L, addressMhs mhs)
 {
+    //1301164283
     //-----your code here----
     if (first(L)=NULL){
         first(L)=mhs;
@@ -47,6 +49,7 @@ void insertLastMhs(ListMhs &L, addressMhs mhs)
 }
 void deleteFirstMhs(ListMhs &L, addressMhs &mhs)
 {
+    //1301164283
     //-----your code here----
     if (next(first(L))==NULL){
         mhs=first(L);
@@ -61,6 +64,7 @@ void deleteFirstMhs(ListMhs &L, addressMhs &mhs)
 }
 void deleteAfterMhs(ListMhs &L,addressMhs prec, addressMhs &mhs)
 {
+    //1301164283
     //-----your code here----
     mhs=next(prec);
     next(prec)=next(mhs);
@@ -69,6 +73,7 @@ void deleteAfterMhs(ListMhs &L,addressMhs prec, addressMhs &mhs)
 }
 void deleteLastMhs(ListMhs &L, addressMhs &mhs)
 {
+    //1301164283
     //-----your code here----
     if (next(first(L))==NULL){
         mhs=first(L);
@@ -88,6 +93,7 @@ void deleteLastMhs(ListMhs &L, addressMhs &mhs)
 
 addressMhs findMahasiswa(ListMhs L, string NIM)
 {
+    //1301164283
     addressMhs adrMhs = first(L);
     while(adrMhs != NULL && info(adrMhs).nim != NIM)
     {
@@ -98,6 +104,7 @@ addressMhs findMahasiswa(ListMhs L, string NIM)
 
 void inputMahasiswa(ListMhs &L)
 {
+    //1301164283
     char choice = 'Y';
     do
     {
@@ -131,6 +138,7 @@ void inputMahasiswa(ListMhs &L)
 
 void showMahasiswa(ListMhs L)
 {
+    //1301164283
     if (first(L) == NULL)
     {
         cout << "Tidak ada mahasiswa\n";

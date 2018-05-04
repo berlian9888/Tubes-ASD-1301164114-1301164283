@@ -7,6 +7,7 @@ void createListRelasi(ListRelasi &L)
 }
 addressRelasi alokasiRelasi(addressMhs mhs, addressBuku buku, Tanggal pinjam, Tanggal kembali)
 {
+    //1301164283
     addressRelasi P = new elemenRelasi;
     mahasiswa(P) = mhs;
     buku(P) = buku;
@@ -18,6 +19,7 @@ addressRelasi alokasiRelasi(addressMhs mhs, addressBuku buku, Tanggal pinjam, Ta
 }
 void insertFirstRelasi(ListRelasi &L, addressRelasi relasi)
 {
+    //1301164283
     if (first(L) == NULL)
     {
         first(L) = relasi;
@@ -35,6 +37,7 @@ void insertFirstRelasi(ListRelasi &L, addressRelasi relasi)
 }
 void insertAfterRelasi(ListRelasi &L,addressRelasi prec, addressRelasi relasi)
 {
+    //1301164283
     if (prec == NULL) return;
     if(prec == last(L))
     {
@@ -50,6 +53,7 @@ void insertAfterRelasi(ListRelasi &L,addressRelasi prec, addressRelasi relasi)
 }
 void insertLastRelasi(ListRelasi &L, addressRelasi relasi)
 {
+    //1301164283
     if(first(L) == NULL)
     {
         insertFirstRelasi(L, relasi);
@@ -65,6 +69,7 @@ void insertLastRelasi(ListRelasi &L, addressRelasi relasi)
 }
 void deleteFirstRelasi(ListRelasi &L, addressRelasi &relasi)
 {
+    //1301164283
     if (first(L)==NULL) return;
     if(next(first(L) == first(L)))
     {
@@ -82,6 +87,7 @@ void deleteFirstRelasi(ListRelasi &L, addressRelasi &relasi)
 }
 void deleteAfterRelasi(ListRelasi &L,addressRelasi prec, addressRelasi &relasi)
 {
+    //1301164283
     if (prec == last(L))
     {
         deleteFirstRelasi(L, relasi);
@@ -99,6 +105,7 @@ void deleteAfterRelasi(ListRelasi &L,addressRelasi prec, addressRelasi &relasi)
 }
 void deleteLastRelasi(ListRelasi &L, addressRelasi &relasi)
 {
+    //1301164283
     if ((first(L) == NULL) || (first(L) == relasi))
     {
         deleteFirstRelasi(L, relasi);
@@ -116,6 +123,7 @@ void deleteLastRelasi(ListRelasi &L, addressRelasi &relasi)
 
 Tanggal getCurrentDate()
 {
+    //1301164283
     time_t ti = time(0);
     struct tm * now = localtime( & ti );
     Tanggal t;
@@ -127,6 +135,7 @@ Tanggal getCurrentDate()
 
 Tanggal getCurrentDate(int x)
 {
+    //1301164114
     time_t ti = time(0);
     struct tm * now = localtime( & ti );
     Tanggal t;
@@ -147,6 +156,7 @@ Tanggal getCurrentDate(int x)
 }
 void cetakTanggal(Tanggal t)
 {
+    //1301164283
     cout << setw(2) << setfill('0') << t.tanggal;
     cout << " - ";
     cout << setw(2) << setfill('0') << t.bulan << " - " << t.tahun;
@@ -154,6 +164,7 @@ void cetakTanggal(Tanggal t)
 
 string tanggalToString(Tanggal t)
 {
+    //1301164283
     string tgl;
     if(t.tanggal < 10) tgl.append("0");
     tgl.append(SSTR(t.tanggal));
@@ -166,6 +177,7 @@ string tanggalToString(Tanggal t)
 }
 bool lessThan(Tanggal t1, Tanggal t2)
 {
+    //1301164283
     if(t1.tahun < t2.tahun) return true;
     if(t1.tahun > t2.tahun) return false;
     if(t1.bulan < t2.bulan) return true;
@@ -175,6 +187,7 @@ bool lessThan(Tanggal t1, Tanggal t2)
 }
 bool isBorrow(ListRelasi L, string NIM)
 {
+    //1301164283
     addressRelasi P = first(L);
     if(P == NULL) return false;
     while(next(P) != first(L) && info(mahasiswa(P)).nim != NIM)
@@ -187,6 +200,7 @@ bool isBorrow(ListRelasi L, string NIM)
 
 void pinjamBuku(ListBuku LB, ListMhs LM, ListRelasi &LR)
 {
+    //1301164114
     while(true)
     {
         string nim;
@@ -295,6 +309,7 @@ void pinjamBuku(ListBuku LB, ListMhs LM, ListRelasi &LR)
 
 void returnBuku(ListRelasi &L)
 {
+    //1301164283
     cout << "Masukkan NIM \t: ";
     string nim;
     cin >> nim;
@@ -337,6 +352,7 @@ void returnBuku(ListRelasi &L)
 
 void mostBorrowed(ListRelasi L)
 {
+    //1301164283
     addressRelasi P = first(L);
     if(first(L) == NULL)
     {
@@ -384,6 +400,7 @@ void mostBorrowed(ListRelasi L)
 
 void TampilkanDataRelasi(ListRelasi L, int offset)
 {
+    //1301164283
     addressRelasi P = first(L);
     int i = 1;
     cout << "+--+------------------------+------------------+--------------+---------------+\n";
@@ -405,6 +422,7 @@ void TampilkanDataRelasi(ListRelasi L, int offset)
 
 void resumePeminjaman(ListRelasi L)
 {
+    //1301164283
     addressRelasi P = first(L);
     if(P == NULL)
     {

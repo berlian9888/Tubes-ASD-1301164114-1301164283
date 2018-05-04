@@ -13,7 +13,7 @@ addressBuku alokasiBuku(Buku buku)
 }
 void insertFirstBuku(ListBuku &L, addressBuku buku)
 {
-    //-----your code here----
+    //1301164114
     if (first(L)==NULL){
         first(L)=buku;
 
@@ -26,7 +26,7 @@ void insertFirstBuku(ListBuku &L, addressBuku buku)
 }
 void insertAfterBuku(ListBuku &L,addressBuku prec, addressBuku buku)
 {
-    //-----your code here----
+    //1301164114
     if (first(L) != NULL)
     {
         if (next(prec) == NULL)
@@ -50,7 +50,7 @@ void insertAfterBuku(ListBuku &L,addressBuku prec, addressBuku buku)
 }
 void insertLastBuku(ListBuku &L, addressBuku buku)
 {
-    //-----your code here----
+    //1301164114
     if (first(L)==NULL){
         first(L)=buku;
 
@@ -67,7 +67,7 @@ void insertLastBuku(ListBuku &L, addressBuku buku)
 }
 void deleteFirstBuku(ListBuku &L, addressBuku &buku)
 {
-    //-----your code here----
+    //1301164114
     buku=first(L);
     first(L)=next(buku);
     next(buku)=NULL;
@@ -76,7 +76,7 @@ void deleteFirstBuku(ListBuku &L, addressBuku &buku)
 }
 void deleteAfterBuku(ListBuku &L,addressBuku prec, addressBuku &buku)
 {
-    //-----your code here----
+    //130116414
     buku=next(prec);
     next(prec)=next(buku);
     prev(next(buku))=prec;
@@ -86,7 +86,7 @@ void deleteAfterBuku(ListBuku &L,addressBuku prec, addressBuku &buku)
 }
 void deleteLastBuku(ListBuku &L, addressBuku &buku)
 {
-    //-----your code here----
+    //1301164114
     if (next(first(L)) == NULL)
     {
         buku = first(L);
@@ -108,6 +108,7 @@ void deleteLastBuku(ListBuku &L, addressBuku &buku)
 
 addressBuku findBukuByJudul(ListBuku L, string Judul)
 {
+    //1301164114
     addressBuku P = first(L);
     while(P != NULL && info(P).judul != Judul)
     {
@@ -118,6 +119,7 @@ addressBuku findBukuByJudul(ListBuku L, string Judul)
 
 addressBuku findBukuByCategory(ListBuku L, string Category)
 {
+    //1301164114
     addressBuku P = first(L);
     while(P != NULL && info(P).kategori != Category)
     {
@@ -128,6 +130,7 @@ addressBuku findBukuByCategory(ListBuku L, string Category)
 
 addressBuku findBukuByNum(ListBuku L, int num)
 {
+    //1301164114
     addressBuku P = first(L);
     int i = 1;
     while(P != NULL && i < num)
@@ -144,6 +147,7 @@ addressBuku findBukuByNum(ListBuku L, int num)
 
 void insertByCategory(ListBuku &L, addressBuku P)
 {
+    //1301164114
     if (first(L) == NULL)
     {
         insertFirstBuku(L, P);
@@ -164,6 +168,7 @@ void insertByCategory(ListBuku &L, addressBuku P)
 
 void insertBefore(ListBuku &L, addressBuku nec, addressBuku P)
 {
+    //1301164114
     if(first(L) == nec)
     {
         insertFirstBuku(L, P);
@@ -176,6 +181,7 @@ void insertBefore(ListBuku &L, addressBuku nec, addressBuku P)
 
 void inputBuku(ListBuku &L)
 {
+    //1301164114
     char pil = 'N';
     do
     {
@@ -212,6 +218,7 @@ void inputBuku(ListBuku &L)
 
 void printInfo(addressBuku P, int offset, int num)
 {
+    //1301164114
     cout << "|";
     if (offset<10) cout << "0";
     cout << num << "|";
@@ -226,6 +233,7 @@ void printInfo(addressBuku P, int offset, int num)
 
 void showBuku(ListBuku L, int offset)
 {
+    //1301164114
     if (first(L) == NULL)
     {
         cout << "Belum ada buku yang terdaftar\n";
@@ -249,6 +257,7 @@ void showBuku(ListBuku L, int offset)
 
 void cariBuku(ListBuku L, int offset, string &key)
 {
+    //1301164114
     cout << "====CARI BUKU====\n";
     cout << "Masukkan kata kunci : ";
     char keyword[100];
@@ -274,6 +283,7 @@ void cariBuku(ListBuku L, int offset, string &key)
 
 void mostBorrowed(ListBuku L)
 {
+    //1301164114
     if(first(L) == NULL)
     {
         cout << "Belum ada buku\n";
