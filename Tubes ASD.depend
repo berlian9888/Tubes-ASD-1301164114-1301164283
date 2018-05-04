@@ -1,0 +1,75 @@
+# depslib dependency file v1.0
+1490859161 source:d:\tubes asd\listbuku.cpp
+	"headListBuku.h"
+
+1490779351 d:\tubes asd\headlistbuku.h
+	"mainHead.h"
+
+1490858403 d:\tubes asd\mainhead.h
+	<iostream>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	<ctime>
+	<iomanip>
+	<sstream>
+
+1490739429 source:d:\tubes asd\listmhs.cpp
+	"headListMhs.h"
+
+1489977992 d:\tubes asd\headlistmhs.h
+	"mainHead.h"
+
+1490779351 source:d:\tubes asd\listrelasi.cpp
+	"headListRelasi.h"
+
+1490779351 d:\tubes asd\headlistrelasi.h
+	"mainHead.h"
+	"headListBuku.h"
+	"headListMhs.h"
+
+1490779351 source:d:\tubes asd\main.cpp
+	"headListBuku.h"
+	"headListMhs.h"
+	"headListRelasi.h"
+
+1490680444 source:d:\tubes asd\helper.cpp
+	"mainHead.h"
+
+1490680444 source:c:\users\user\documents\asd\tubes asd\helper.cpp
+	"mainHead.h"
+
+1490858403 c:\users\user\documents\asd\tubes asd\mainhead.h
+	<iostream>
+	<conio.h>
+	<stdlib.h>
+	<windows.h>
+	<ctime>
+	<iomanip>
+	<sstream>
+
+1490859161 source:c:\users\user\documents\asd\tubes asd\listbuku.cpp
+	"headListBuku.h"
+
+1490779351 c:\users\user\documents\asd\tubes asd\headlistbuku.h
+	"mainHead.h"
+
+1490739429 source:c:\users\user\documents\asd\tubes asd\listmhs.cpp
+	"headListMhs.h"
+
+1489977992 c:\users\user\documents\asd\tubes asd\headlistmhs.h
+	"mainHead.h"
+
+1490779351 source:c:\users\user\documents\asd\tubes asd\main.cpp
+	"headListBuku.h"
+	"headListMhs.h"
+	"headListRelasi.h"
+
+1490779351 c:\users\user\documents\asd\tubes asd\headlistrelasi.h
+	"mainHead.h"
+	"headListBuku.h"
+	"headListMhs.h"
+
+1525424472 source:c:\users\user\documents\asd\tubes asd\listrelasi.cpp
+	"headListRelasi.h"
+
